@@ -15,4 +15,9 @@ public class DatabaseException extends RuntimeException {
         super(message);
         this.statusCode = statusCode;
     }
+
+    public DatabaseException(int statusCode, String message, Throwable cause) {
+        super(message, cause);
+        this.statusCode = statusCode;
+    }
 }
