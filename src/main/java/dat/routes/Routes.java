@@ -1,6 +1,5 @@
 package dat.routes;
 
-import dat.security.enums.Role;
 import dat.security.routes.SecurityRoutes;
 import io.javalin.apibuilder.EndpointGroup;
 
@@ -11,6 +10,7 @@ public class Routes {
     public EndpointGroup getRoutes() {
         return () -> {
             path("/auth", SecurityRoutes.getSecurityRoutes());
+            path("/candidates", CandidateRoutes.getRoutes());
         };
     }
 }
